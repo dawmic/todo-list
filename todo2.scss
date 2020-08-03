@@ -1,0 +1,159 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    box-sizing: border-box;
+    .container {
+        width: 500px;
+        min-height: 800px;
+        background: white;
+        margin: 0 auto;
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 2rem;
+        border: 2px solid black;
+        .timer {
+            width: 100%;
+            background: url('icons/sunflower.jpg');
+            background-size: cover;
+            height: 150px;
+            position: relative;
+            border-top-left-radius: 2rem;
+            border-top-right-radius: 2rem;
+            .clock {
+                position: absolute;
+                bottom: 5%;
+                left: 10%;
+                font-size: 2rem;
+                font-size: Arial;
+                letter-spacing: 1px;
+                color: #000000;
+                font-family: Arial;
+            }
+        }
+        form {
+            margin-top: 2rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid black;
+            input {
+                width: 250px;
+                height: 50px;
+                border: none;
+                text-align: center;
+                outline: none;
+                font-size: 1.3rem;
+            }
+            input::placeholder {
+                text-align: center;
+            }
+            button {
+                background: transparent;
+                font-size: 2rem;
+                height: 80%;
+                width: 60px;
+                outline: none;
+                border: none;
+            }
+        }
+        .list {
+            list-style-type: none;
+            margin-top: 2rem;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            li {
+                text-align: center;
+                margin-bottom: .5rem;
+                padding-bottom: 0.5rem;
+                width: 95%;
+                min-height: 2rem;
+                line-height: 2;
+                border-bottom: 2px solid black;
+                /* position: relative; */
+                transition: all .5s linear;
+                display: flex;
+                span {
+                    flex: 1;
+                    font-size: 1.5rem;
+                    line-height: 1.3;
+                    text-align: left;
+                    font-family: Arial;
+                }
+            }
+        }
+    }
+}
+
+.done {
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.taskBtn {
+    border: none;
+    outline: none;
+    width: 10%;
+    margin-right: .5rem;
+    /* position: absolute;
+    right: 0; */
+    background: url('icons/bin.png') no-repeat;
+    background-position-x: center;
+}
+
+.doneBtn {
+    border: none;
+    outline: none;
+    width: 10%;
+    /* position: absolute;
+    left: 0; */
+    background: url('icons/correct.png') no-repeat;
+    background-position-x: center;
+}
+
+.doneBtnClicked {
+    border: none;
+    outline: none;
+    width: 10%;
+    /* position: absolute;
+    left: 0; */
+    background: url('icons/correct_done.png') no-repeat;
+    background-position-x: center;
+}
+
+.fall {
+    transform: translateY(8rem);
+    opacity: 0;
+}
+
+@media screen and (max-width: 450px) {
+    body {
+        background: none;
+        .container {
+            width: 100%;
+            margin-top: 0;
+            border: none;
+            .timer {
+                border-top-right-radius: 0;
+                border-top-left-radius: 0;
+                -webkit-box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.75);
+                -moz-box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.75);
+                box-shadow: 0px 9px 5px 0px rgba(0, 0, 0, 0.75);
+            }
+            .clear {
+                font-size: 1.5rem;
+            }
+            ul {
+                margin: 0 2rem 0 2rem;
+            }
+        }
+    }
+}
