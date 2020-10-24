@@ -70,3 +70,16 @@ if (minute < 10) {
 }
 
 clock.innerHTML = `${days[day]} ${hour}:${minute}`;
+
+
+//LOCALSTORAGE
+
+window.addEventListener("beforeunload", () => {
+    localStorage.setItem('lista', list.innerHTML);
+}, false);
+
+
+const savedLS = localStorage.getItem('lista');
+if (savedLS) {
+    list.innerHTML = savedLS;
+}
